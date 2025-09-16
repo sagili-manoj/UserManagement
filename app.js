@@ -6,7 +6,7 @@ const User = require('./models/user');
 const app = express();
 
 // connect to mongodb & listen for requests
-const dbURI = process.env.MONGO_URI;
+const dbURI = process.env.MONGO_URI;  //place your MongoDb URI here
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }) 
   .then((result) =>{ console.log("Database-connected"); app.listen(8080)})
